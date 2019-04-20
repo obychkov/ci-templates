@@ -49,8 +49,3 @@ deploy_on_master:
     ssh_host: _
   only:
     - master
-
-after_script:
-  - |-
-    curl -X POST -H 'Content-type: application/json' --data "{'text': 'Successful deploy on $CI_COMMIT_REF_NAME-server!'}" $SLACK_WEBHOOK
-
