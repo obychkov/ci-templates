@@ -25,7 +25,7 @@ before_script:
   script: |-
           ssh -o StrictHostKeyChecking=no $login@$ssh_host "
             cd $path
-            ls
+            ls"
 
 deploy_on_dev:
   <<: *deploy-developer
