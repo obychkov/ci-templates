@@ -15,11 +15,7 @@ before_script:
   script: |-
           ssh -o StrictHostKeyChecking=no $login@$ssh_host "
             cd $path
-            php bin/magento maintenance:enable
-            git pull origin $CI_COMMIT_REF_NAME
-            composer install
-            php bin/magento setup:upgrade
-            php bin/magento maintenance:disable"
+            ls"
                                                       
 .deploy-production: &deploy-production
   script: |-
