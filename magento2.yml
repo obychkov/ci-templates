@@ -52,4 +52,5 @@ deploy_on_production_mode:
     ssh_host: _
     branch: _
   only:
-    - $branch
+    variables:
+      - $branch
