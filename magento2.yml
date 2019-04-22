@@ -39,9 +39,6 @@ deploy_on_developer_mode:
     login: _
     path: _
     ssh_host: _
-    branch: _
-  only:
-    - $branch
     
 
 deploy_on_production_mode:
@@ -50,7 +47,3 @@ deploy_on_production_mode:
     login: _
     path: _
     ssh_host: _
-    branch: _
-  only:
-    variables:
-      - $branch
