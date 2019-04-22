@@ -33,29 +33,23 @@ before_script:
             php bin/magento setup:static-content:deploy
             php bin/magento maintenance:disable"
 
-deploy_on_dev:
+deploy_on_developer_mode:
   <<: *deploy-developer
   variables:
     login: _
     path: _
     ssh_host: _
+    branch: _
   only:
-    - dev
+    - $branch
     
-deploy_on_stage:
+
+deploy_on_production_mode:
   <<: *deploy-production
   variables:
     login: _
     path: _
     ssh_host: _
+    branch: _
   only:
-    - stage
-    
-deploy_on_master:
-  <<: *deploy-production
-  variables:
-    login: _
-    path: _
-    ssh_host: _
-  only:
-    - master
+    - $branch
