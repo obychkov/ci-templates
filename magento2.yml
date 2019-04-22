@@ -39,6 +39,8 @@ deploy_on_developer_mode:
     login: _
     path: _
     ssh_host: _
+  only:
+    - nothing
     
 
 deploy_on_production_mode:
@@ -47,3 +49,5 @@ deploy_on_production_mode:
     login: _
     path: _
     ssh_host: _
+  only:
+    - nothing
