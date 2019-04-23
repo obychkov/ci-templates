@@ -8,7 +8,7 @@ before_script:
   - mkdir ~/.ssh
   - echo $SSH_KEY | base64 -d > ~/.ssh/id_rsa
   - chmod -R 700 ~/.ssh
-  - "curl -X POST -H 'Content-type: application/json' --data \"{'text':'Job: deploy on $CI_COMMIT_REF_NAME','attachments':[{'color':'#36a64f','author_name':'$GITLAB_USER_LOGIN','text':'$CI_COMMIT_MESSAGE'}]}\" $SLACK_WEBHOOK"
+  - "curl -X POST -H 'Content-type: application/json' --data \"{'text':\"Job: deploy on $CI_COMMIT_REF_NAME\",'attachments':[{'color':'#36a64f','author_name':\"$GITLAB_USER_LOGIN\",'text':\"$CI_COMMIT_MESSAGE\"}]}\" $SLACK_WEBHOOK"
     
 .deploy-developer: &deploy-developer
   script: |-
