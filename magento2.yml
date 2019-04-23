@@ -19,6 +19,7 @@ before_script:
             git pull origin $CI_COMMIT_REF_NAME
             composer install
             php bin/magento setup:upgrade
+            php bin/magento setup:static-content:deploy -f
             php bin/magento maintenance:disable"
                                                       
 .deploy-production: &deploy-production
